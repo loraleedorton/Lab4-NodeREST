@@ -1,0 +1,36 @@
+body {
+  padding: 50px;
+  text-align:center;
+  color:white;
+  background:url(https://www.deseretnews.com/images/article/hires/1754561/1754561.jpg);
+  background-size:100% 100%;
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-color:navy;
+  font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#cityInput {
+  margin:auto;
+  padding:50px;
+  width:75%;
+}
+
+#txtHint {
+  text-align:left;
+  width:100%;
+  margin:auto;
+}
+
+#wordInput {
+  clear:both;
+  margin:auto;
+  padding:50px;
+  width:75%;
+}
+
+#owldef {
+  text-align:left;
+  width:100%;
+  margin:auto;
+}

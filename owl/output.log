@@ -1,0 +1,13 @@
+nohup: ignoring input
+Port 8080
+[0mGET /owl.html [32m200 [0m8.700 ms - 876[0m
+[0mGET /favicon.ico [33m404 [0m322.559 ms - 1262[0m
+query  { q: 'generation' }
+[0mGET /owl?q=generation [32m200 [0m215.240 ms - -[0m
+query  { q: 'fish' }
+[0mGET /owl?q=fish [32m200 [0m160.213 ms - -[0m
+[0mGET / [32m200 [0m41.268 ms - 170[0m
+[0mGET /owl.html [32m200 [0m1.814 ms - 876[0m
+[0mGET /favicon.ico [33m404 [0m42.474 ms - 1262[0m
+[0mGET /owl.html [32m200 [0m1.323 ms - 876[0m
+[0mGET /favicon.ico [33m404 [0m34.517 ms - 1262[0m

@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <title>City Finder</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+  <form id="cityInput">
+    <h1>Enter A Utah City: </h1><br><input type="text" id="cityfield" value=""><br><br>
+    Suggestion: <br><span id="txtHint">Empty</span>
+  </form>
+  <form id="wordInput">
+    <h1>Enter a word: </h1><br><input type="text" id="owlform" value="">
+    <button id="owlbutton">Submit</button><br><br>
+    Definition: <br><span id="owldef">Empty</span>
+  </form>
+  <script>
+    $("#cityfield").keyup(function(event) {
+      event.preventDefault();
+      var url = "getcity?q=" + $("#cityfield").val();
+      $.getJSON(url, function(data) {
+        var everything;
+        everything = "<ul>";
+        $.each(data, function(i, item) {
+          everything += "<li> " + data[i].city;
+        });
+        everything += "</ul>";
+        $("#txtHint").html(everything);
+      });
+    });
+    $("#owlbutton").click(function(event) {
+      event.preventDefault();
+      var url = "owl?q=" + $("#owlform").val();
+      $.getJSON(url, function(data) {
+        var everything;
+        everything = "<ul>";
+        $.each(data, function(i, item) {
+          everything += "<li>" + data[i].defenition + "</li>";
+        });
+        everything += "</ul>";
+        $("#owldef").html(everything);
+      });
+    });
+  </script>
+</body>
+
+</html>
